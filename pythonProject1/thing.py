@@ -86,7 +86,7 @@ class enemy(object):
                 self.walkCount = 0
 
 
-zombie = enemy(100,410,64,64,300)
+zombie = enemy(500,410,64,64,300)
 
 
 def draw():
