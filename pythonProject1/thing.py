@@ -63,7 +63,7 @@ class enemy(object):
         self.vel = 3
     def draw(self):
         self.move()
-        self.draw()
+
 
 
 
@@ -92,7 +92,7 @@ zombie = enemy(500,410,64,64,300)
 def draw():
     screen.clear()
     player.draw()
-
+    zombie.draw()
 
 
 pgzrun.go()
