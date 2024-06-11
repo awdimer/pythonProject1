@@ -91,7 +91,7 @@ zombie = enemy(100,410,64,64,300)
 def draw():
     screen.clear()
     player.draw()
-    zombie.draw()
+
 
 
 pgzrun.go()
