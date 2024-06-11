@@ -52,7 +52,7 @@ def on_mouse_down():
     print()
 
 class enemy(object):
-    def __init__(self, x, y, width,height,end):
+    def __init__(self, x, y, width, height, end):
         self.x = x
         self.y = y
         self.width = width
