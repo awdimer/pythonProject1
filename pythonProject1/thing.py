@@ -62,7 +62,7 @@ class enemy(object):
         self.vel = 3
     def draw(self):
         self.move()
-
+        self.draw()
 
 
 
