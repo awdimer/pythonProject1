@@ -89,8 +89,8 @@ class enemy(object):
 
 
 
-zombie = enemy(500,410,64,64,300,Actor("zombie"))
-print(zombie)
+zombie = enemy(500,410,64,64,300,'zombie')
+
 
 def draw():
     screen.clear()
