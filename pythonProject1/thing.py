@@ -59,7 +59,7 @@ def on_mouse_down():
     bulletMove()
 
 def bulletMove():
-    print()
+    bullet.pos =
 
 
 def rotate1(zombie,mx,my):
