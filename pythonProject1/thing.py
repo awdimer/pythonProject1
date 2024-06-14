@@ -2,7 +2,7 @@ import os
 os.environ['SDL_VIDEO_WINDOW_POS'] = '0,0'
 import pgzrun
 from pgzhelper import *
-
+import random
 
 WIDTH = 1000
 zombie = Actor("zombie",center = (100,100), anchor=('center','center'))
@@ -14,9 +14,9 @@ player = Actor("player", center =(100,100), anchor=('center','center'))
 gravity = 3
 move_ticker = 0
 mx,my = pygame.mouse.get_pos()
-
-
-
+zombieAlive = False
+zombieWait= 100
+zombieDraw = False
 
 
 
@@ -29,8 +29,8 @@ def update():
     mx,my = pygame.mouse.get_pos()
     player.scale = 1
 
-    zombie1()
-
+    zombierotate()
+    zombieSpawn()
 
     if keys[pygame.K_LEFT]:
         if player.x > 0:
@@ -92,13 +92,20 @@ def rotate1(zombie,mx,my):
     zombie.rect = pygame.transform.rotate(zombie.rect,mx,my)
 
 
-def zombie1():
+def zombierotate():
     print()
     zombie.angle = zombie.angle_to(player)
 
 
-
-
+def zombieSpawn():
+    global zombieAlive,zombieDraw
+    if zombieAlive == False:
+        pygame.time.delay(1000000)
+        zombieAlive = True
+    if zombieAlive == True:
+        zombie.x = random.randint(50,500)
+        zombie.y = random.randint(50,500)
+        zombieDraw = True
 
 
 
@@ -108,7 +115,8 @@ def zombie1():
 def draw():
     screen.clear()
     player.draw()
-    zombie.draw()
+    if zombieDraw == True:
+        zombie.draw()
 
 
 pgzrun.go()
