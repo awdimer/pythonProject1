@@ -17,7 +17,7 @@ mx,my = pygame.mouse.get_pos()
 zombieAlive = False
 zombieWait= 100
 zombieDraw = False
-
+zombieAlive1 = True
 
 
 
@@ -98,15 +98,16 @@ def zombierotate():
 
 
 def zombieSpawn():
-    global zombieAlive,zombieDraw
+    global zombieAlive,zombieDraw,zombieAlive1
     if zombieAlive == False:
         pygame.time.delay(1000)
         zombieAlive = True
-    if zombieAlive == True:
+
+    if zombieAlive == True and zombieAlive1 == True:
         zombie.x = random.randint(50,500)
         zombie.y = random.randint(50,500)
         zombieDraw = True
-
+        zombieAlive1 = False
 
 
 
