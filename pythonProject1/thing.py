@@ -30,7 +30,7 @@ def update():
     event = pygame.event.get()
     mx,my = pygame.mouse.get_pos()
     player.scale = 1
-
+    print(player.angle)
     zombieRotate()
     zombieSpawn()
     zombieMove()
@@ -57,8 +57,9 @@ def on_mouse_move(pos):
 def on_mouse_down():
     bullet.angle = player.angle
 
-def bulletMove():
 
+def bulletMove():
+    print()
 
 
 def rotate1(zombie,mx,my):
