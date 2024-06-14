@@ -100,7 +100,7 @@ def zombierotate():
 def zombieSpawn():
     global zombieAlive,zombieDraw
     if zombieAlive == False:
-        pygame.time.delay(1000000)
+        pygame.time.delay(1000)
         zombieAlive = True
     if zombieAlive == True:
         zombie.x = random.randint(50,500)
