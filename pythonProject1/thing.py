@@ -55,7 +55,7 @@ def on_mouse_move(pos):
     player.angle = player.angle_to(pos)
 
 def on_mouse_down():
-    print()
+    bullet.angle = player.angle
 
 class enemy(object):
     def __init__(self, x, y,end,img):
