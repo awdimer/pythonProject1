@@ -32,6 +32,7 @@ def update():
     zombierotate()
     zombieSpawn()
     zombieMove()
+    checkCollide()
     if keys[pygame.K_LEFT]:
         if player.x > 0:
             player.x -= 5
