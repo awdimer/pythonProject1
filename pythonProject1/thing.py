@@ -76,7 +76,16 @@ def bulletMove():
     bullet.angle = player.angle
     bullet.angle = round(0)
     dx,dy = pygame.mouse.get_pos()
-
+    if dx != bullet.x:
+        if dx > bullet.x:
+            bullet.x = bullet.x + bulletVelocity
+        if dx < bullet.x:
+            bullet.x = bullet.x - bulletVelocity
+    if dy != bullet.y:
+        if dy > bullet.y:
+            bullet.y = bullet.y + bulletVelocity
+        if dy < bullet.y:
+            bullet.y = bullet.y - bulletVelocity
 
 def rotate1(zombie,mx,my):
     zombie.rect = pygame.transform.rotate(zombie.rect,mx,my)
