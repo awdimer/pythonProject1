@@ -57,38 +57,8 @@ def on_mouse_move(pos):
 def on_mouse_down():
     bullet.angle = player.angle
 
-class enemy(object):
-    def __init__(self, x, y,end,img):
-        self.x = x
-        self.y = y
-        self.path = [x, end]
-        self.walkCount = 0
-        self.vel = 3
-        self.img = Actor("zombie")
-
-    def draw(self):
-        self.move()
-
-
-
-
-
-
-    def move(self):
-        if self.vel > 0:  # If we are moving right
-            if self.x < self.path[1] + self.vel:  # If we have not reached the furthest right point on our path.
-                self.x += self.vel
-            else:  # Change direction and move back the other way
-                self.vel = self.vel * -1
-                self.x += self.vel
-                self.walkCount = 0
-        else:  # If we are moving left
-            if self.x > self.path[0] - self.vel:  # If we have not reached the furthest left point on our path
-                self.x += self.vel
-            else:  # Change direction
-                self.vel = self.vel * -1
-                self.x += self.vel
-                self.walkCount = 0
+def bulletMove():
+    bullet.x =
 
 
 def rotate1(zombie,mx,my):
