@@ -24,7 +24,7 @@ zombieAlive1 = True
 zombieSpeed = 1
 playerHealth = 3
 bulletVelocity = 5
-
+dx,dy = pygame.mouse.get_pos()
 def update():
     global velocity,gravity,velocity1,event,run,window,mouse,player_rect,angle,player_pos,mx,my
     keys = pygame.key.get_pressed()
@@ -70,10 +70,12 @@ def on_mouse_down(pos):
     bulletMove()
 
 def bulletMove():
+    global dx, dy
     bullet.x = player.x
     bullet.y = player.y
     bullet.angle = player.angle
     bullet.angle = round(0)
+    dx,dy = pygame.mouse.get_pos()
 
 
 def rotate1(zombie,mx,my):
