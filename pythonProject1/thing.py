@@ -12,7 +12,7 @@ correction_angle = 90
 player = Actor("player", center =(100,100), anchor=('center','center'))
 bullet = Actor("bullet",center =(100,100), anchor=('center','center'))
 
-
+bulletDraw = False
 gravity = 3
 move_ticker = 0
 mx,my = pygame.mouse.get_pos()
@@ -140,6 +140,7 @@ def draw():
     player.draw()
     if zombieDraw == True:
         zombie.draw()
-
+    if bulletDraw == True:
+        bullet.draw()
 
 pgzrun.go()
