@@ -18,7 +18,7 @@ zombieAlive = False
 zombieWait= 100
 zombieDraw = False
 zombieAlive1 = True
-zombieSpeed = 5
+zombieSpeed = 0.9
 
 
 
