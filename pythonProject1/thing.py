@@ -28,8 +28,6 @@ def update():
     event = pygame.event.get()
     mx,my = pygame.mouse.get_pos()
     player.scale = 1
-    print(zombie.x)
-    print(zombie.y)
     if keys[pygame.K_LEFT]:
         if player.x > 0:
             player.x -= 5
