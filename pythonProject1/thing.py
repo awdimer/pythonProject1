@@ -10,6 +10,8 @@ zombie = Actor("zombie",center = (100,100), anchor=('center','center'))
 HEIGHT = 1000
 correction_angle = 90
 player = Actor("player", center =(100,100), anchor=('center','center'))
+bullet = Actor("bullet",center =(100,100), anchor=('center','center'))
+
 
 gravity = 3
 move_ticker = 0
