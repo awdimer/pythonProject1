@@ -112,7 +112,15 @@ def zombieSpawn():
 
 
 def zombieMove():
+    global zombieSpeed1
     print()
+    if player.x != zombie.x:
+        if player.x > zombie.x:
+            zombie.x = zombie.x + zombieSpeed
+    if player.y != zombie.y:
+        if player.y > zombie.y:
+            zombie.y = zombie.y + zombieSpeed
+
 
 
 def draw():
