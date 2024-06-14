@@ -77,7 +77,10 @@ def zombieSpawn():
 
     if zombieAlive == True and zombieAlive1 == True:
         zombie.x = random.randint(50,500)
-        zombie.y = random.randint(50,500)
+        zombie.y = random.randint(50, 500)
+        if zombie.x == player.x and zombie.y == player.y:
+            zombieSpawn()
+
         zombieDraw = True
         zombieAlive1 = False
 
