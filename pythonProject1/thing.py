@@ -112,7 +112,7 @@ def zombieSpawn():
 
 
 def zombieMove():
-
+    print()
 
 
 def draw():
