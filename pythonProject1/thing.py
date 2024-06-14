@@ -117,10 +117,13 @@ def zombieMove():
     if player.x != zombie.x:
         if player.x > zombie.x:
             zombie.x = zombie.x + zombieSpeed
+        if player.x < zombie.x:
+            zombie.x = zombie.x - zombieSpeed
     if player.y != zombie.y:
         if player.y > zombie.y:
             zombie.y = zombie.y + zombieSpeed
-
+        if player.y < zombie.y:
+            zombie.y = zombie.y - zombieSpeed
 
 
 def draw():
