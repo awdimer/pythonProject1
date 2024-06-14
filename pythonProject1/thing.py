@@ -51,15 +51,20 @@ def update():
 def rotate(player,mx,my):
     player.rect = pygame.transform.rotate(player.rect,mx,my)
 
+def rotate3(bullet,mx,my):
+    bullet.rect = pygame.transform.rotate(bullet.rect,mx,my)
+
 def on_mouse_move(pos):
     player.angle = player.angle_to(pos)
 
-def on_mouse_down():
-    bullet.angle = player.angle
+def on_mouse_down(pos):
+    global bulletDraw
+    bullet.angle = bullet.angle_to(pos)
+    bulletDraw = True
     bulletMove()
 
 def bulletMove():
-    bullet.pos =
+    print()
 
 
 def rotate1(zombie,mx,my):
