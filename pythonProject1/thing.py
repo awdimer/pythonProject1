@@ -53,7 +53,7 @@ def on_mouse_down():
     print()
 
 class enemy(object):
-    def __init__(self, x, y,end,img):
+    def __init__(self, x, y,end):
         self.x = x
         self.y = y
         self.path = [x, end]
