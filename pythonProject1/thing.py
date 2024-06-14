@@ -20,7 +20,7 @@ zombieDraw = False
 zombieAlive1 = True
 zombieSpeed = 1
 playerHealth = 3
-
+bulletVelocity = 5
 
 def update():
     global velocity,gravity,velocity1,event,run,window,mouse,player_rect,angle,player_pos,mx,my
