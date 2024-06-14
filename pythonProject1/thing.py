@@ -19,7 +19,7 @@ zombieWait = 100
 zombieDraw = False
 zombieAlive1 = True
 zombieSpeed = 1
-playerHealth =
+playerHealth = 3
 
 
 def update():
@@ -131,6 +131,7 @@ def checkCollide():
 def playerHit():
     global playerHealth
     playerHealth -= 1
+
 
 
 def draw():
