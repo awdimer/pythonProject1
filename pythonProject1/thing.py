@@ -69,6 +69,8 @@ def on_mouse_down(pos):
     bulletMove()
 
 def bulletMove():
+    bullet.x = player.x
+    bullet.y = player.y
     bullet.angle = player.angle
     bullet.angle = round(0)
 
