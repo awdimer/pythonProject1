@@ -11,7 +11,8 @@ HEIGHT = 1000
 correction_angle = 90
 player = Actor("player", center =(100,100), anchor=('center','center'))
 bullet = Actor("bullet",center =(100,100), anchor=('center','center'))
-
+bulletPointx = 0
+bulletPointy = 0
 bulletDraw = False
 gravity = 3
 move_ticker = 0
@@ -36,6 +37,8 @@ def update():
     zombieSpawn()
     zombieMove()
     checkCollide()
+
+
     if keys[pygame.K_LEFT]:
         if player.x > 0:
             player.x -= 5
@@ -59,14 +62,25 @@ def on_mouse_move(pos):
     player.angle = player.angle_to(pos)
 
 def on_mouse_down(pos):
+    global bulletPointx,bulletPointy
     global bulletDraw
+    bulletPointx,bulletPointy = pygame.mouse.get_pos()
     bullet.pos = player.pos
     bullet.angle = bullet.angle_to(pos)
     bulletDraw = True
     bulletMove()
 
 def bulletMove():
-    print()
+    if bulletPointx != bullet.x:
+        if bulletPointx > bullet.x:
+            bullet.x = bullet.x + bulletVelocity
+        if bulletPointx < bullet.x:
+            bullet.x = bullet.x - bulletVelocity
+    if bulletPointy != bullet.y:
+        if bulletPointy > bullet.y:
+            bullet.y = bullet.y + bulletVelocity
+        if bulletPointy < bullet.y:
+            bullet.y = bullet.y - bulletVelocity
 
 
 def rotate1(zombie,mx,my):
