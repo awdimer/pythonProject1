@@ -53,11 +53,9 @@ def on_mouse_down():
     print()
 
 class enemy(object):
-    def __init__(self, x, y, width, height, end,img):
+    def __init__(self, x, y,end,img):
         self.x = x
         self.y = y
-        self.width = width
-        self.height = height
         self.path = [x, end]
         self.walkCount = 0
         self.vel = 3
@@ -89,7 +87,7 @@ class enemy(object):
 
 
 
-zombie = enemy(500,410,64,64,300,'zombie')
+zombie = enemy(500,410,300,'zombie')
 
 
 def draw():
