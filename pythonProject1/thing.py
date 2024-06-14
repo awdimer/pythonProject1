@@ -18,7 +18,7 @@ zombieAlive = False
 zombieWait= 100
 zombieDraw = False
 zombieAlive1 = True
-
+zombieSpeed = 5
 
 
 
@@ -112,7 +112,8 @@ def zombieSpawn():
 
 
 def zombieMove():
-    zombie
+
+
 
 def draw():
     screen.clear()
