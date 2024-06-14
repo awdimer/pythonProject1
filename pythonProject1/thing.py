@@ -64,7 +64,7 @@ def on_mouse_move(pos):
 def on_mouse_down(pos):
     global bulletPointx,bulletPointy
     global bulletDraw
-    bulletPointx,bulletPointy = pygame.mouse.get_pos()
+    bulletPointx, bulletPointy = pygame.mouse.get_pos()
     bullet.pos = player.pos
     bullet.angle = bullet.angle_to(pos)
     bulletDraw = True
