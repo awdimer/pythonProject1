@@ -70,7 +70,7 @@ def on_mouse_down(pos):
 
 def bulletMove():
     bullet.angle = player.angle
-
+    bullet.angle = round(0)
 
 
 def rotate1(zombie,mx,my):
