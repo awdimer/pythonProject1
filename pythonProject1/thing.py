@@ -62,7 +62,7 @@ def rotate3(bullet,mx,my):
 def on_mouse_move(pos):
     player.angle = player.angle_to(pos)
 
-def on_mouse_down(pos):
+def on_mouse_down():
     global bulletPointx,bulletPointy
     global bulletDraw
     bulletPointx, bulletPointy = pygame.mouse.get_pos()
