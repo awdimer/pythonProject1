@@ -28,6 +28,10 @@ def update():
     event = pygame.event.get()
     mx,my = pygame.mouse.get_pos()
     player.scale = 1
+
+    zombie1()
+
+
     if keys[pygame.K_LEFT]:
         if player.x > 0:
             player.x -= 5
@@ -84,8 +88,21 @@ class enemy(object):
                 self.walkCount = 0
 
 
+def rotate1(zombie,mx,my):
+    zombie.rect = pygame.transform.rotate(zombie.rect,mx,my)
 
-zombie = enemy(500,410,300,'zombie')
+
+def zombie1():
+    print()
+    zombie.angle = zombie.angle_to(player)
+
+
+
+
+
+
+
+
 
 
 def draw():
