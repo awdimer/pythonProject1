@@ -29,7 +29,7 @@ def update():
     mx,my = pygame.mouse.get_pos()
     player.scale = 1
 
-    zombierotate()
+    zombieRotate()
     zombieSpawn()
     zombieMove()
     checkCollide()
@@ -93,7 +93,7 @@ def rotate1(zombie,mx,my):
     zombie.rect = pygame.transform.rotate(zombie.rect,mx,my)
 
 
-def zombierotate():
+def zombieRotate():
     zombie.angle = zombie.angle_to(player)
 
 
