@@ -128,9 +128,9 @@ def checkCollide():
         playerHit()
 
 def playerHit():
-    global playerHealth
+    global playerHealth,zombieAlive
     playerHealth -= 1
-
+    zombieAlive = False
 
 
 def draw():
