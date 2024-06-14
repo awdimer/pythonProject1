@@ -111,7 +111,8 @@ def zombieSpawn():
 
 
 
-
+def zombieMove():
+    zombie
 
 def draw():
     screen.clear()
