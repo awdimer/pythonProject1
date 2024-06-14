@@ -59,6 +59,7 @@ def on_mouse_move(pos):
 
 def on_mouse_down(pos):
     global bulletDraw
+    bullet.pos = player.pos
     bullet.angle = bullet.angle_to(pos)
     bulletDraw = True
     bulletMove()
