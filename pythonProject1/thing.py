@@ -94,7 +94,6 @@ def rotate1(zombie,mx,my):
 
 
 def zombierotate():
-    print()
     zombie.angle = zombie.angle_to(player)
 
 
@@ -113,7 +112,6 @@ def zombieSpawn():
 
 def zombieMove():
     global zombieSpeed1
-    print()
     if player.x != zombie.x:
         if player.x > zombie.x:
             zombie.x = zombie.x + zombieSpeed
