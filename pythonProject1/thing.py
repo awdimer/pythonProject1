@@ -73,8 +73,8 @@ def bulletMove():
     global dx, dy
     bullet.x = player.x
     bullet.y = player.y
-    bullet.angle = player.angle
     bullet.angle = round(0)
+    bullet.angle = player.angle
     dx,dy = pygame.mouse.get_pos()
     if dx != bullet.x:
         if dx > bullet.x:
