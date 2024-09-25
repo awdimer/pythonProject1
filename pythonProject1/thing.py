@@ -142,4 +142,8 @@ def draw():
     if bulletDraw == True:
         bullet.draw()
 
+
+
+
+
 pgzrun.go()
